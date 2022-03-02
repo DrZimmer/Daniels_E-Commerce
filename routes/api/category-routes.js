@@ -48,7 +48,6 @@ router.delete('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [Product], //TODO do i need to include product here?
   })
     .then((category) => res.json(category))
     .catch((err) => res.status(400).json(err));
